@@ -1,0 +1,47 @@
+@import "../../../styles/variables.module.scss";
+
+.modalContainer {
+  padding: $spacing-3xl;
+  max-width: 295px;
+  background-color: $primaryBackgroungColor;
+  box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08),
+    0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+  border-radius: $radius-xl;
+}
+
+.discription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-lg;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.title {
+  color: $primaryTextModalColor;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.subTitle {
+  color: $tertiaryTextModalColor;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857;
+}
+
+.buttonsContainer {
+  padding-top: $spacing-3xl;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

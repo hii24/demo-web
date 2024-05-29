@@ -1,0 +1,25 @@
+export const validationMessage = {
+  requiredField: "The field is required",
+  passwordShouldBeSame: "Passwords should be the same",
+  invalidEmail: "Email has invalid format",
+  mustBeNumeric: "The value must be numeric",
+  minLength: "The value is too short",
+  maxLength: "The value is too long",
+  mustBeInRange: "The value must be within the specified range",
+  invalidDate: "Date is not valid",
+  mustBeChecked: "This box must be checked",
+  incorrectCredentials: "Email or password is incorrect",
+  expiredSession: "Your session has expired, please log in again",
+  unauthorizedAccess: "You do not have permission to access this resource",
+  accountLocked:
+    "Your account has been locked due to multiple failed login attempts",
+  passwordTooShort: "The password must be at least 8 characters long.",
+  passwordMustContainLetters: "The password must contain at least one letter.",
+  passwordMustContainNumber: "The password must contain at least one number.",
+  passwordMustContainSpecial:
+    "The password must contain at least one special character (e.g., @, $, !, %, *, #, ?, &).",
+  emailAlreadyInUse: "An account with this email already exists.",
+  validationError: "Validation error.",
+  unknownError: "Unknown error.",
+  alreadyRegisteredError: "This email address is already registered",
+};

@@ -1,0 +1,39 @@
+@import "../../../styles/variables.module.scss";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-2xl;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2xl;
+  margin-bottom: $spacing-2xl;
+  width: 100%;
+  text-align: start;
+}
+
+.headerSubText {
+  margin: 0;
+
+  color: $secondaryTextModalColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.42857;
+}
+
+.selector {
+  margin-bottom: $spacing-2xl;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2xl;
+}

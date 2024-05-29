@@ -1,0 +1,146 @@
+// colors
+$backgroundModalLoginColor: #0c111d;
+$primaryTextModalColor: #101828;
+$secondaryTextModalColor: #344054;
+$tertiaryTextModalColor: #475467;
+$tertiaryHoverColor: #344054;
+$tertiaryButtonTextModalColor: #1a6251;
+$tertiaryButtonHoverTextModalColor: #53389e;
+$placeholderModalColor: #667085;
+$buttonBackgroundModalColor: #207b63;
+$buttonBackgroundHoverModalColor: #1a6251;
+$buttonBackgroundDisabledModalColor: #f2f4f7;
+$buttonPrimaryTextModalColor: #ffffff;
+
+$buttonWhiteBackgroundColor: #ffffff;
+$buttonWhiteBorderColor: #d0d5dd;
+$buttonWhiteHoverColor: #f9fafb;
+
+$iconBorderModalColor: #eaecf0;
+
+$disabledButtonTextColor: #98a2b3;
+
+$inputBorderColor: #d0d5dd;
+
+$textButtonHoverColor: #15483c;
+
+$primaryBrandTextColor: #144037;
+
+$errorInputColor: #fda29b;
+$codeInputPlaceholderTextColor: #d0d5dd;
+
+$primaryBackgroungColor: #ffffff;
+$sidebarBorderColor: #eaecf0;
+$sidebarSubFooterLinkColor: #667085;
+$sidebarActiveBackgroundColor: #f9fafb;
+$sidebarActiveLinkColor: #182230;
+
+$headerButtonBackgroundColor: #d9f2e6;
+$headerButtonTextColor: #207b63;
+$headerButtonBorderColor: #207b63;
+$headerButtonHoverBackgroundColor: #1a6251;
+$headerButtonHoverTextColor: #fff;
+$headerButtonDisabledBorderColor: #eaecf0;
+$headerButtonDisabledBackgroundColor: #f2f4f7;
+$headerDefaultBackgoundAvatarColor: #f2f4f7;
+$greetingsTextColor: #1a6251;
+$startSessionButtonColorText: #f9eecc;
+$clientButtonsBorderColor: #85d0b5;
+
+$clientButtonHoverTextColor: #15483c;
+$clientButtonHoverBackgroundColor: #effaf6;
+$gettingStartedBackgroundColor: #effaf6;
+
+$loaderBackgroundColor: #15483c;
+$loaderTextColor: #f9eecc;
+$fillLinkButtonBorderColor: #d0d5dd;
+$fillLinkButtonHoverColor: #182230;
+$linkSessionHoverColor: #f3dd94;
+
+$sessionSettingsBackgroundColor: #272e3d;
+$sessionPrimaryTextColor: #fff;
+
+$toggleButtonActiveBackgroundColor: #207b63;
+$toggleButtonDisabledBackgroundColor: #f2f4f7;
+$toggleButtonHoverBackgroundColor: #1a6251;
+$toogleButtonDotColor: #ffffff;
+
+$settingCardBorderColor: #404968;
+$settingCardBorderActiveColor: #207b63;
+
+$settingsTactileLoginBorderColor: #404968;
+$settingsTactileTextColor: #d0d5dd;
+$settingsTactileLoginBackgroundColor: #182230;
+
+// ORBS COLORS
+
+$orbWhiteColor: #f9fafb;
+$orbDarkColor: #0c111d;
+$orbOrangeColor: #f38744;
+$orbGreenColor: #099250;
+$orbPinkColor: #dd2590;
+
+// Session background colors
+$sessionBackgroungColor: rgb(208, 213, 221);
+$sessionDarkBackgroundButton: #0c111d;
+$sessionLightBackgroundButton: #f2f4f7;
+$sessionBlueHazeBackgroundButton: #b3b8db;
+$sessionBluePeacockBackgroundButton: #026aa2;
+$sessionEvergladeBackgroundButton: #15483c;
+$sessionRiverBackgroundButton: url("../assets/images/session/buttons/river.png");
+$sessionMountainBackgroundButton: url("../assets/images/session/buttons/montain.png");
+$sessionVolcanoBackgroundButton: url("../assets/images/session/buttons/volcano.png");
+$sessionValleyBackgroundButton: url("../assets/images/session/buttons/valley.png");
+$sessionFjordBackgroundButton: url("../assets/images/session/buttons/fjord.png");
+$bannerClientBackground: url("../assets/vectors/starLine.svg");
+$modalRemoveClientBackground: url("../assets/vectors/clients/removeEntity.svg");
+$settingsBlockBorderColor: #475467;
+
+$speedCountColor: #207b63;
+$passedCountColor: #98a2b3;
+$startSessionButtonBackgroundColor: #2e90fa;
+$startSessionHoverButtonBackgroundColor: #1570ef;
+$stopSessionButtonBackgroundColor: #57130a;
+$stopSessionButtonTextColor: #ff9c66;
+$stopSessionHoverButtonBackgroundColor: #771a0d;
+$stopSessionHoverButtonTextColor: #ffd6ae;
+$errorButtonPrimaryErrorBgHover: #B42318;
+$errorButtonPrimaryErrorBg: #D92D20;
+$sessionControllerInactiveButtonBackgroundColor: #d0d5dd;
+$sessionControllerInactiveButtonColor: #667085;
+$sessionControllerActiveShadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05),
+  0px 0px 0px 4px rgba(158, 119, 237, 0.24);
+$colorsTextTextBrandAccentOnBrand50: #FDF9ED;
+$sessionPauseHoverBackgroundColor: #344054;
+
+$sliderEmptyColor: #eaecf0;
+$bannerBackgroundColor: #1a6251;
+// spacings
+$spacing-xxs: 2px;
+$spacing-xs: 4px;
+$spacing-sm: 6px;
+$spacing-md: 8px;
+$spacing-lg: 12px;
+$spacing-xl: 16px;
+$spacing-2xl: $spacing-md * 2;
+$spacing-3xl: $spacing-md * 3;
+$spacing-4xl: $spacing-md * 4;
+$spacing-5xl: $spacing-md * 5;
+$spacing-6xl: $spacing-md * 6;
+$spacing-7xl: $spacing-md * 8;
+
+$spacing-40: 40px;
+$spacing-10: 10px;
+$spacing-margin-20: 20px;
+$spacing-margin-32: 32px;
+
+$desktop-padding-horizontal: 32px;
+
+$spacing-xxs: 2px;
+$radius-sm: 6px;
+$radius-md: 8px;
+$radius-lg: 10px;
+$radius-xl: 12px;
+$radius-2xl: 16px;
+
+$sidebar-width: 312px;

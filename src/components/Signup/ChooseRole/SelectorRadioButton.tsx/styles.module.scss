@@ -1,0 +1,85 @@
+@import "../../../../styles/variables.module.scss";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2xl;
+}
+
+.label {
+  padding: $spacing-2xl;
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-md;
+
+  border-radius: $radius-xl;
+  outline: 1px solid $buttonWhiteBorderColor;
+
+  background: $buttonWhiteBackgroundColor;
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  transition: outline 150ms ease-in;
+
+  &:has(.inputCustom:checked) {
+    outline: 2px solid $buttonBackgroundModalColor;
+  }
+}
+
+.labelInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.textRole {
+  margin: 0;
+  text-align: start;
+  color: $secondaryTextModalColor;
+  /* Text sm/Medium */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.42857;
+}
+
+.textDescription {
+  margin: 0;
+  text-align: start;
+  color: $tertiaryTextModalColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857;
+}
+
+.inputCustom {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+  &:checked + .inputPoint {
+    border: 6px solid $buttonBackgroundModalColor;
+  }
+}
+
+.inputPoint {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid $buttonWhiteBorderColor;
+  box-sizing: border-box;
+  flex-shrink: 0;
+
+  transition: border 150ms ease-in;
+}

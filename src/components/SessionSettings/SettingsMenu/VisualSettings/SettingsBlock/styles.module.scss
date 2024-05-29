@@ -1,0 +1,25 @@
+@import "../../../../../styles/variables.module.scss";
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.settings {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: $spacing-lg;
+}
+
+.title {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+}

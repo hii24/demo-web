@@ -1,0 +1,25 @@
+@import "../../styles/variables.module.scss";
+
+.fieldsContainer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2xl;
+  margin-bottom: $spacing-margin-20;
+}
+
+.checkboxContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-margin-32;
+}
+
+.buttonsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}

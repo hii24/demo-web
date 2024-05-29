@@ -1,0 +1,52 @@
+@import "../../../../../../../styles/variables.module.scss";
+
+.element {
+  width: 35px;
+  height: 35px;
+  border-radius: $radius-md;
+}
+
+.dark {
+  background: $sessionDarkBackgroundButton;
+}
+
+.light {
+  background: $sessionLightBackgroundButton;
+}
+
+.blueHaze {
+  background: $sessionBlueHazeBackgroundButton;
+}
+
+.peacock {
+  background: $sessionBluePeacockBackgroundButton;
+}
+
+.everglade {
+  background: $sessionEvergladeBackgroundButton;
+}
+
+.river {
+  background: $sessionRiverBackgroundButton;
+  background-size: contain;
+}
+
+.montain {
+  background: $sessionMountainBackgroundButton;
+  background-size: contain;
+}
+
+.volcano {
+  background: $sessionVolcanoBackgroundButton;
+  background-size: contain;
+}
+
+.valley {
+  background: $sessionValleyBackgroundButton;
+  background-size: contain;
+}
+
+.fjord {
+  background: $sessionFjordBackgroundButton;
+  background-size: contain;
+}

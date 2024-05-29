@@ -1,0 +1,38 @@
+@import "../../../styles/variables.module.scss";
+
+.container {
+  width: 100%;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.title {
+  margin-bottom: $spacing-xs;
+  color: $primaryTextModalColor;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.55556;
+}
+
+.subTitle {
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857%;
+}
+
+.closeButton {
+  padding: $spacing-md;
+  position: absolute;
+  top: 16px;
+  right: -$spacing-md;
+}
+
+.icon {
+  &:hover {
+    fill: #000;
+  }
+}

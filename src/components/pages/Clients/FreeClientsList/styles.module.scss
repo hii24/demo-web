@@ -1,0 +1,26 @@
+@import "../../../../styles/variables.module.scss";
+
+.container {
+  max-width: 652px;
+  display: flex;
+  flex-direction: column;
+}
+.btn {
+  background: $buttonBackgroundDisabledModalColor;
+  border: 1px solid $sidebarBorderColor;
+  color: $disabledButtonTextColor;
+  padding: $spacing-xl;
+  border-radius: $radius-sm;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+.btn p{
+  margin: 0;
+  margin-left: $spacing-lg;
+}
+
+

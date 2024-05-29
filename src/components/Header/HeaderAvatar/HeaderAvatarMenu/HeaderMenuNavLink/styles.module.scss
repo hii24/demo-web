@@ -1,0 +1,23 @@
+@import "../../../../../styles/variables.module.scss";
+
+.link {
+  height: 38px;
+  width: 228px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $spacing-md;
+  color: $secondaryTextModalColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.42857%;
+  text-decoration: none;
+  padding-left: $spacing-sm;
+  padding-right: $spacing-sm;
+
+  &:hover {
+    color: #182230;
+    background-color: #f9fafb;
+  }
+}

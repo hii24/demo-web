@@ -1,0 +1,54 @@
+@import "../../../styles/variables.module.scss";
+
+.container {
+  background-color: $loaderBackgroundColor;
+  height: 72px;
+  padding: 0 $desktop-padding-horizontal;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+
+  color: $loaderTextColor;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.55556;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $spacing-7xl;
+
+  @media screen and (max-width: 800px) {
+    gap: 20px;
+  }
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $spacing-xl;
+}
+
+.logoText {
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
+}

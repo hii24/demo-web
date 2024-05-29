@@ -1,0 +1,22 @@
+@import "../../../../../../../styles/variables.module.scss";
+
+.small {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $primaryBackgroungColor;
+}
+
+.medium {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: $primaryBackgroungColor;
+}
+
+.large {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: $primaryBackgroungColor;
+}

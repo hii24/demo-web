@@ -1,0 +1,13 @@
+@import "../../styles/variables.module.scss";
+
+.modalContainer {
+  background-color: #fff;
+  width: 400px;
+
+  padding: $spacing-6xl $spacing-3xl;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: $radius-xl;
+}

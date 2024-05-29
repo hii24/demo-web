@@ -1,0 +1,23 @@
+@import "../../../styles/variables.module.scss";
+
+.container {
+  padding: $spacing-3xl 0;
+  display: flex;
+  gap: $spacing-2xl;
+  width: 100%;
+
+  @media screen and (max-width: 940px) {
+    flex-direction: column;
+  }
+}
+
+.userButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (max-width: 940px) {
+    flex-direction: row;
+    gap: 20px;
+  }
+}

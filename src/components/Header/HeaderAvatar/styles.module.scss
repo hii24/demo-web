@@ -1,0 +1,31 @@
+@import "../../../styles/variables.module.scss";
+
+.container {
+}
+
+.link {
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.defaultIcon {
+  background-color: $headerDefaultBackgoundAvatarColor;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+
+  transition: outline 100ms ease-in;
+
+  &:active {
+    outline: 4px solid rgba(152, 162, 179, 0.14);
+    color: rgba(152, 162, 179, 0.14);
+  }
+}

@@ -1,0 +1,45 @@
+@import "../../../../styles/variables.module.scss";
+
+.container {
+  padding: 0 $spacing-xl;
+
+  padding-bottom: $spacing-2xl;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  border-bottom: 1px solid $buttonWhiteBorderColor;
+}
+
+.subContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  color: $primaryTextModalColor;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.55556;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: inherit;
+  border: none;
+
+  cursor: pointer;
+}
+
+.description {
+  color: $tertiaryTextModalColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857;
+  text-align: start;
+}

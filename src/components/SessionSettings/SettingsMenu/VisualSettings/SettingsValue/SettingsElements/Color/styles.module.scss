@@ -1,0 +1,27 @@
+@import "../../../../../../../styles/variables.module.scss";
+
+.orb {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.white {
+  background-color: $orbWhiteColor;
+}
+
+.dark {
+  background-color: $orbDarkColor;
+}
+
+.orange {
+  background-color: $orbOrangeColor;
+}
+
+.green {
+  background-color: $orbGreenColor;
+}
+
+.pink {
+  background-color: $orbPinkColor;
+}

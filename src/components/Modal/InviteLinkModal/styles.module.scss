@@ -1,0 +1,85 @@
+@import "../../../styles/variables.module.scss";
+
+.modalContainer {
+  padding: $spacing-4xl $spacing-xl $spacing-3xl $spacing-xl;
+  width: 512px;
+  background-color: $primaryBackgroungColor;
+  border-radius: $radius-xl;
+
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+  position: relative;
+  overflow: visible;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $spacing-2xl;
+  position: relative;
+}
+
+.headerTitleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $spacing-xs;
+}
+
+.title {
+  color: $primaryTextModalColor;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.55556;
+}
+
+.subTitle {
+  color: $tertiaryTextModalColor;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857;
+}
+
+.closeButton {
+  padding: $spacing-md;
+  border: none;
+  background-color: inherit;
+  position: absolute;
+  top: -20px;
+  right: -4px;
+
+  cursor: pointer;
+}
+
+.copyNotification {
+  padding: 6px 8px;
+  background-color: white;
+  border-radius: $radius-md;
+
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+
+  transition: visibility 250ms ease-in, opacity 250ms ease-in;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.textNotification {
+  color: $primaryTextModalColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.55556;
+}

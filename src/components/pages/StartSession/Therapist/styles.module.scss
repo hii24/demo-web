@@ -1,0 +1,12 @@
+@import "../../../../styles/variables.module.scss";
+
+.container {
+  padding: $spacing-2xl 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  //   width: fit-content;
+  max-width: 684px;
+}

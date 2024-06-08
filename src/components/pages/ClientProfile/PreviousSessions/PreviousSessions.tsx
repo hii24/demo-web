@@ -12,9 +12,7 @@ interface Props {
 const PreviousSessions: React.FC<Props> = (props) => {
   const [sessions, setSessions] = React.useState<ISessionData[] | null>(null);
   useEffect(() => {
-    // getClientSession(props.id);
     getClientSessionsList().then((response) => {
-      // setSessions(response.data);
       setSessions(response.data!.sessions.data)
     });
   }, []);

@@ -1,4 +1,4 @@
-export const isClient = false;
+export const isClient = true;
 export const isLogin = true;
 
 export const videoUrl = "https://youtu.be/AqG147-XEWg?si=-dYkB37e7akuvgqe";

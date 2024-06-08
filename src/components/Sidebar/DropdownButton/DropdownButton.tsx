@@ -1,6 +1,7 @@
-import React, { ReactNode, useState } from "react";
-import { ReactComponent as ChevronIcon } from "../../../assets/vectors/navigation/chevron.svg";
-import styles from "./styles.module.scss";
+import React, { ReactNode, useState } from 'react';
+import { ReactComponent as ChevronIcon } from '../../../assets/vectors/navigation/chevron.svg';
+import styles from './styles.module.scss';
+import { NavLink } from 'react-router-dom';
 
 interface Props {
   title: string;
@@ -30,9 +31,9 @@ const DropdownButton: React.FC<Props> = (props) => {
             : styles.dropdownContent
         }
       >
-        <a href="#">Resourcing</a>
-        <a href="#">Guided sessions</a>
-        <a href="#">Affirmations</a>
+        <NavLink to={'resourcing'}>Resourcing</NavLink>
+        <NavLink to={'guidedSessions'}>Guided sessions</NavLink>
+        <NavLink to={'affirmations'}>Affirmations</NavLink>
       </div>
     </>
   );

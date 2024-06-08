@@ -11,6 +11,14 @@ export const headerTitle = (path: string) => {
       return 'Session Info';
     case Paths.HISTORY:
       return "History";
+     case Paths.RESOURCING:
+      return "Resourcing";
+     case Paths.GUIDEDSESSIONS:
+      return "Guided sessions";
+     case Paths.AFFIRMATIONS:
+      return "Affirmations";
+    case Paths.PREVIEWAUDIO:
+      return "Preview";
     default:
       return "";
   }

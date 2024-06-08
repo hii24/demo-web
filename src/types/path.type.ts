@@ -4,4 +4,8 @@ export enum Paths {
   HISTORY = "/history",
   CLIENTPROFILE = "/clientProfile",
   SESSIONINFO = "/sessionInfo",
+  RESOURCING = "/resourcing",
+  GUIDEDSESSIONS = "/guidedSessions",
+  AFFIRMATIONS = "/affirmations",
+  PREVIEWAUDIO = "/previewAudio",
 }

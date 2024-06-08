@@ -19,6 +19,10 @@ import StartSessionPage from '../components/pages/StartSession/StartSession';
 import AuthStore from '../store/store';
 import ClientProfile from '../components/pages/ClientProfile/ClientProfile';
 import SessionInfo from '../components/pages/Clients/Sessioninfo/Sessioninfo';
+import AffirmationsPage from '../components/pages/Affirmations/Affirmations';
+import GuidedSessionsPage from '../components/pages/GuidedSessions/GuidedSessionsPage';
+import ResourcingPage from '../components/pages/Resourcing/Resourcing';
+import PreviewAudio from '../components/pages/PreviewAudio/PreviewAudio';
 
 function RoutesWithLayout() {
   return (
@@ -46,6 +50,38 @@ function RoutesWithLayout() {
           element={
             <HeaderLayout>
               <ClientsPage/>
+            </HeaderLayout>
+          }
+        />
+        <Route
+          path="resourcing"
+          element={
+            <HeaderLayout>
+              <ResourcingPage/>
+            </HeaderLayout>
+          }
+        />
+        <Route
+          path="guidedSessions"
+          element={
+            <HeaderLayout>
+              <GuidedSessionsPage/>
+            </HeaderLayout>
+          }
+        />
+        <Route
+          path="affirmations"
+          element={
+            <HeaderLayout>
+              <AffirmationsPage/>
+            </HeaderLayout>
+          }
+        />
+        <Route
+          path="previewAudio"
+          element={
+            <HeaderLayout>
+              <PreviewAudio/>
             </HeaderLayout>
           }
         />
@@ -102,11 +138,6 @@ function RouterWithBackdrop() {
 
 const Navigation = observer(() => {
   const isAuthenticated = AuthStore.isAuthenticated;
-  console.log(isAuthenticated);
-
-  useEffect(() => {
-    console.log(isAuthenticated);
-  }, [isAuthenticated]);
   return (
     <BrowserRouter>
       {isAuthenticated ? (
@@ -115,6 +146,10 @@ const Navigation = observer(() => {
             <Route path="/" element={<RoutesWithLayout/>}>
               <Route path="startSession" Component={StartSessionPage}/>
               <Route path="clients" Component={ClientsPage}/>
+              <Route path="affirmations" Component={AffirmationsPage}/>
+              <Route path="guidedSessions" Component={GuidedSessionsPage}/>
+              <Route path="resourcing" Component={ResourcingPage}/>
+              <Route path="previewAudio" Component={PreviewAudio}/>
               <Route path="sessionInfo" Component={SessionInfo}/>
               <Route path="clientProfile" Component={ClientProfile}/>
               <Route path="history" Component={HistoryPage}/>

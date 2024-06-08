@@ -17,7 +17,7 @@ interface User {
 class AuthStore {
   token = localStorage.getItem("authToken");
   user: User | null = JSON.parse(localStorage.getItem("user") || "null");
-  premium: boolean = false;
+  premium: boolean = true;
 
   constructor() {
     makeAutoObservable(this);

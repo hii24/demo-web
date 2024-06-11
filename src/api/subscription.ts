@@ -4,9 +4,10 @@ import { Response } from './types/response.interface';
 import { subscriptionResponse } from './types/subscription.response';
 import AuthStore from '../store/store';
 import sessionStore from '../store/sessionStore';
+import authStore from '../store/store';
 
 export async function subscription(): Promise<Response<subscriptionResponse>> {
-  sessionStore.setLoading(true);
+  authStore.setLoading(true);
   try {
     const response = await axios.get(
       `${baseApiUrl}/user/subscription`,
@@ -16,7 +17,7 @@ export async function subscription(): Promise<Response<subscriptionResponse>> {
         },
       }
     );
-
+    authStore.setPremium(response.data!.subscription.status);
     return {
       data: response.data,
       statusCode: response.status,
@@ -31,6 +32,6 @@ export async function subscription(): Promise<Response<subscriptionResponse>> {
       errorMessage: error.message,
     };
   } finally {
-    sessionStore.setLoading(false);
+    authStore.setLoading(false);
   }
 }

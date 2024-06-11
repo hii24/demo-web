@@ -94,7 +94,7 @@ const ClientInfo: React.FC<Props> = (props) => {
         <h3>{name}</h3>
         <p>{description || 'No description added'}</p>
         <div className={styles.readBtns}>
-          <FillButton buttonText="Edit" onClick={handleEditClient}>
+          <FillButton buttonText="Edit info" style={styles.btnClient} onClick={handleEditClient}>
             <img src={editClientIcon} alt="editClientIcon"/>
           </FillButton>
           <TextButton style={styles.textBtn} buttonText="Remove client" onClick={() => setIsVisible(true)}/>

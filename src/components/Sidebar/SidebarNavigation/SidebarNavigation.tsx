@@ -4,10 +4,10 @@ import { ReactComponent as HistoryIcon } from "../../../assets/vectors/navigatio
 import { ReactComponent as ResourcesIcon } from "../../../assets/vectors/navigation/resources.svg";
 import { ReactComponent as StartIcon } from "../../../assets/vectors/navigation/startSession.svg";
 import { Paths } from "../../../types/path.type";
-import { isClient } from "../../../utils/default";
 import DropdownButton from "../DropdownButton/DropdownButton";
 import SidebarNavLink from "./SidebarNavLink/SidebarNavLink";
 import styles from "./styles.module.scss";
+import authStore from '../../../store/store';
 
 const SidebarNavigation: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const SidebarNavigation: React.FC = () => {
           </SidebarNavLink>
         </li>
         <li>
-          {isClient ? (
+          {authStore.isClient ? (
             <DropdownButton title="Resources">
               <ResourcesIcon />
             </DropdownButton>

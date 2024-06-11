@@ -11,6 +11,8 @@ interface Props {
   value: string;
   errorMessage?: string;
   startIcon?: string;
+  onKeyDown?: (event: React.KeyboardEvent) => void;
+  style?: string;
 }
 
 const FormField: React.FC<Props> = (props) => {
@@ -29,10 +31,11 @@ const FormField: React.FC<Props> = (props) => {
       </label>}
       <div className={styles.inputContainer}>
         <input
+          onKeyDown={props.onKeyDown}
           type={props.type}
           placeholder={props.placeholder}
           required={props.isRequired}
-          className={`${styles.input} ${errorClass} ${props.startIcon && styles.inputWithStartIcon}`}
+          className={`${styles.input} ${errorClass} ${props.startIcon && styles.inputWithStartIcon} ${props.style}`}
           id={props.fieldName}
           onChange={handleChange}
           value={props.value}

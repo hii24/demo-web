@@ -1,19 +1,20 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import ArrowLeft from '../../../assets/vectors/resourcing/arrowLeft.svg';
 import AudionIcon from '../../../assets/vectors/resourcing/audio.svg';
 import moment from 'moment/moment';
 import StartBLSSession from '../Affirmations/StartBLSSession/StartBLSSession';
 
 const PreviewAudio: React.FC = () => {
+  const navigate = useNavigate();
   const {state} = useLocation();
   const duration = moment.duration(state.duration, 'seconds');
   const formattedDuration = `${duration.minutes()}:${duration.seconds()}`;
   console.log(state);
   return (
     <div className={styles.container}>
-      <div className={styles.goBack}>
+      <div className={styles.goBack}  onClick={() => navigate(-1)}>
         <img src={ArrowLeft} alt="play icon"/>
         <p>Go back</p>
       </div>
@@ -30,7 +31,7 @@ const PreviewAudio: React.FC = () => {
           </div>
         </div>
       </div>
-      <audio controls preload="auto" className={styles.audio}>
+      <audio controls preload="auto" className={styles.audio} controlsList="nodownload">
         <source src={state.source} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>

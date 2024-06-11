@@ -21,11 +21,14 @@ const VideoBlock: React.FC<IProps> = (props) => {
   const duration = moment.duration(props.duration, 'seconds');
   const formattedDuration = `${duration.minutes()}:${duration.seconds()}`;
 
+  const onHandleShowVideo = () => {
+    authStore.premium && setIsModalVisible(true)
+  }
   return (
     <div className={styles.container}>
-      <div className={styles.content}>
+      <div className={styles.content} onClick={onHandleShowVideo}>
         {authStore.premium ?
-          <div className={styles.playBtn} onClick={() => setIsModalVisible(true)}>
+          <div className={styles.playBtn}>
             <img src={PlayIcon} alt="play icon"/>
             <p>Watch</p>
           </div> :
@@ -35,7 +38,7 @@ const VideoBlock: React.FC<IProps> = (props) => {
       </div>
       <div className={styles.info}>
         <img className={styles.svg} src={VideoIcon} alt="VideoIcon"/>
-        <div className={styles.videoInfo}>
+        <div className={styles.videoInfo} onClick={onHandleShowVideo}>
           <h3>{props.title}</h3>
           <p><span>Video</span>{formattedDuration} min</p>
         </div>

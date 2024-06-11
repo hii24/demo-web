@@ -75,7 +75,7 @@ const ClientSessionNotes: React.FC<Props> = (props) => {
       </> : <>
         <p className={styles.notes}>{notes || 'No notes added'}</p>
         <div className={styles.readBtns}>
-          <FillButton buttonText="Edit" onClick={handleEditClient}>
+          <FillButton buttonText="Edit notes" style={styles.btnClient} onClick={handleEditClient}>
             <img src={editClientIcon} alt="editClientIcon"/>
           </FillButton>
           <TextButton buttonText='Delete session' onClick={()=>setIsVisible(true)}>

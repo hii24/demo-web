@@ -22,13 +22,13 @@ const AudioBlock: React.FC<IProps> = (props) => {
 
   const navigate = useNavigate();
   const onHandleNavigate = () => {
-    navigate('/previewAudio', {state: {source: props.source, title: props.title, img: props.img, duration: props.duration}})
+    authStore.premium && navigate('/previewAudio', {state: {source: props.source, title: props.title, img: props.img, duration: props.duration}})
   }
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
+    <div className={styles.container} >
+      <div className={styles.content} onClick={onHandleNavigate}>
         {authStore.premium ?
-          <div className={styles.playBtn} onClick={onHandleNavigate}>
+          <div className={styles.playBtn} >
             <img src={PlayIcon} alt="play icon"/>
             <p>Start session</p>
           </div> :
@@ -38,7 +38,7 @@ const AudioBlock: React.FC<IProps> = (props) => {
       </div>
       <div className={styles.info}>
         <img className={styles.svg} src={AudionIcon} alt="AudionIcon"/>
-        <div className={styles.videoInfo}>
+        <div className={styles.videoInfo} onClick={onHandleNavigate}>
           <h3>{props.title}</h3>
           <p><span>Audio</span>{formattedDuration} min</p>
         </div>

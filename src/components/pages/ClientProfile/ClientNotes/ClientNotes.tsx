@@ -60,7 +60,7 @@ const ClientNotes: React.FC<Props> = (props) => {
       </> : <>
         <p className={styles.notes}>{notes || 'No notes added'}</p>
         <div className={styles.readBtns}>
-          <FillButton buttonText="Edit" onClick={handleEditClient}>
+          <FillButton style={styles.btnClient} buttonText="Edit notes" onClick={handleEditClient}>
             <img src={editClientIcon} alt="editClientIcon"/>
           </FillButton>
 

@@ -34,12 +34,18 @@ const ClientsList: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.form}>
         <FormField
+          style={styles.searchInput}
           value={searchValue}
           setValue={setSearchValue}
           placeholder="Search"
           isRequired={true}
           startIcon={searchIcon}
           type="text"
+          onKeyDown={(event: React.KeyboardEvent) => {
+            if (event.key === 'Enter') {
+              searchClients();
+            }
+          }}
         />
         <FillButton buttonText="Search" onClick={searchClients} isWhiteButton/>
       </div>
@@ -54,6 +60,14 @@ const ClientsList: React.FC = () => {
       {clientsList.map((client) => (
         <Client key={client.id} id={client.id} name={client.name} description={client.description}/>
       ))}
+      {
+        clientsList.length === 0 && (
+          <div className={styles.noResult}>
+            <h5>No results</h5>
+            <p>Check the spelling and try again</p>
+          </div>
+        )
+      }
     </div>
   );
 };

@@ -16,5 +16,29 @@
 }
 
 .form > button {
-  width: 91px!important;
+  width: fit-content;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+.noResult h5{
+
+  margin: 0;
+  margin-top: 32px;
+  color: $tertiaryHoverColor;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+.noResult p{
+  margin: 0;
+  margin-top: 8px;
+  color: $placeholderModalColor;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.searchInput{
+  border-color: #D0D5DD;
 }

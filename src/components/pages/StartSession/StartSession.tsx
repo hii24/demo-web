@@ -7,7 +7,7 @@ import StartSessionTherapistPage from "./Therapist/StartSession";
 const StartSessionPage: React.FC = observer(() => {
   return (
     <>
-      {!authStore.user?.user_type ? (
+      {authStore.isClient ? (
         <StartSessionClientPage />
       ) : (
         <StartSessionTherapistPage />

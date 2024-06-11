@@ -105,6 +105,7 @@
 
 
 .goBack {
+  cursor: pointer;
   display: flex;
   gap: $spacing-sm;
   margin-bottom: $spacing-margin-20;
@@ -119,6 +120,7 @@
   margin: $spacing-margin-20 0;
   width: 100%;
 }
+
 .description{
   display: flex;
   color: $tertiaryTextModalColor!important;

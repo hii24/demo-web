@@ -10,7 +10,7 @@ import StartBLSSession from '../StartBLSSession/StartBLSSession';
 const AffirmationsList: React.FC = () => {
   const [affirmations, setAffirmations] = useState<any>([]);
   const [activeItem, setActiveItem] = useState<string | null>(null);
-
+  const [currentAffirmation, setCurrentAffirmation] = useState<any>(null);
   useEffect(() => {
     getResources().then(
       (res) => {
@@ -28,6 +28,8 @@ const AffirmationsList: React.FC = () => {
       {
         affirmations.map((affirmation: any) => (
           <AffirmationItem
+            setCurrentAffirmation={setCurrentAffirmation}
+            currentAffirmation={currentAffirmation}
             key={affirmation.id}
             id={affirmation.id}
             affirmationTitle={affirmation.title}
@@ -54,6 +56,8 @@ interface IAffirmationItemProps {
   isActive: boolean;
   onItemClicked: (id: string) => void;
   id: string;
+  setCurrentAffirmation: (affirmation: any) => void;
+  currentAffirmation: any;
 }
 
 const AffirmationItem: React.FC<IAffirmationItemProps> = (props) => {
@@ -65,7 +69,14 @@ const AffirmationItem: React.FC<IAffirmationItemProps> = (props) => {
       setPlay(false);
     };
   }, []);
+  useEffect(() => {
 
+    if (props.currentAffirmation !== props.id) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+      setPlay(false);
+    }
+  }, [props.currentAffirmation]);
   const handlePlayClick = (e: any) => {
     if (!authStore.premium) {
       return;
@@ -73,8 +84,9 @@ const AffirmationItem: React.FC<IAffirmationItemProps> = (props) => {
     e.stopPropagation();
     if (play) {
       audioRef.current.pause();
-      audioRef.current.currentTime = 0;
+
     } else {
+      props.setCurrentAffirmation(props.id);
       audioRef.current.play();
     }
     setPlay(!play);

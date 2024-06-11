@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Backdrop from '../components/Backdrop/Backdrop';
 import CheckEmail from '../components/ForgotPassword/CheckEmail/CheckEmail';
@@ -23,6 +23,11 @@ import AffirmationsPage from '../components/pages/Affirmations/Affirmations';
 import GuidedSessionsPage from '../components/pages/GuidedSessions/GuidedSessionsPage';
 import ResourcingPage from '../components/pages/Resourcing/Resourcing';
 import PreviewAudio from '../components/pages/PreviewAudio/PreviewAudio';
+import authStore from '../store/store';
+import { subscription } from '../api/subscription';
+import sessionStore from '../store/sessionStore';
+import DefaultLoader from '../components/DefaultLoader/DefaultLoader';
+import Loader from '../components/Loader/Loader';
 
 function RoutesWithLayout() {
   return (
@@ -138,6 +143,13 @@ function RouterWithBackdrop() {
 
 const Navigation = observer(() => {
   const isAuthenticated = AuthStore.isAuthenticated;
+  useEffect(() => {
+    isAuthenticated && subscription();
+  }, []);
+  if (authStore.loading) {
+    return <Loader />
+  }
+
   return (
     <BrowserRouter>
       {isAuthenticated ? (

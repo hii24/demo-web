@@ -1,0 +1,66 @@
+@import "../../../../../../styles/variables.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex: 1;
+  border-radius: 12px;
+  border: 1px solid #EAECF0;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  padding: 24px;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  color: $primaryTextModalColor;
+}
+
+.subtitle {
+  margin: 0;
+  margin-bottom: 20px;
+  color: #475467;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.paymentInfo {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #EAECF0;
+  display: flex;
+  flex-direction: row;
+
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.cardInfo {
+  flex: 1;
+  display: flex;
+}
+
+.cardDetails {
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: #475467;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.cardDetails span{
+  font-weight: 500;
+  color: #344054;
+
+}

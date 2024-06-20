@@ -1,0 +1,49 @@
+@import "../../../styles/variables.module.scss";
+
+.modalContainer {
+  width: 400px;
+  background-color: $primaryBackgroungColor;
+  padding: $spacing-xl 0;
+  opacity: 1;
+  border-radius: $radius-xl;
+}
+
+.subContainer {
+  border-bottom: 1px solid $buttonWhiteBorderColor;
+}
+
+.formContainer {
+  padding: $spacing-2xl $spacing-xl;
+
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+  align-items: flex-start;
+}
+
+.descriptionField {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  align-items: flex-start;
+}
+
+.desctiprionLength {
+  color: $tertiaryTextModalColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857;
+}
+
+.buttonsContainer {
+  padding-top: $spacing-xl;
+  padding-left: $spacing-xl;
+  padding-right: $spacing-xl;
+
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}

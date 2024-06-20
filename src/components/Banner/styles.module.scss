@@ -1,0 +1,45 @@
+@import "../../styles/variables.module";
+
+.container {
+  padding: $spacing-40 $spacing-3xl;
+  background: $loaderBackgroundColor;
+  border-radius: $radius-2xl;
+  background-image: $bannerClientBackground;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container h2 {
+  color: $startSessionButtonColorText;
+  margin: 0;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 38px;
+}
+
+.container p {
+  color: $colorsTextTextBrandAccentOnBrand50;
+  margin-top: $spacing-xl;
+  margin-bottom: $spacing-4xl;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.container span {
+  font-weight: 700;
+}
+
+.container button {
+  border: 1px solid $clientButtonsBorderColor;
+  color: $tertiaryButtonTextModalColor;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+
+
+}

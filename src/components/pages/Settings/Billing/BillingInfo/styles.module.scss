@@ -1,0 +1,15 @@
+@import "../../../../../styles/variables.module.scss";
+
+.container {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    gap: 24px;
+  }
+}

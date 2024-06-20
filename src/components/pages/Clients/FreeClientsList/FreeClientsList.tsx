@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import Banner from './Banner/Banner';
+import Banner from '../../../Banner/Banner';
 import FreeClient from './FreeClient/FreeClient';
 import addClient from '../../../../assets/vectors/clients/addClient.svg'
 

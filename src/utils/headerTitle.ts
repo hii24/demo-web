@@ -19,6 +19,8 @@ export const headerTitle = (path: string) => {
       return "Affirmations";
     case Paths.PREVIEWAUDIO:
       return "Preview";
+      case Paths.SETTINGS:
+      return "Settings";
     default:
       return "";
   }

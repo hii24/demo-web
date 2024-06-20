@@ -5,7 +5,6 @@ import editClientIcon from '../../../../../assets/vectors/clients/editClient.svg
 import TextAreaField from '../../../../FormField/TextAreaField';
 import { updateClientSession } from '../../../../../api/updateClientSession';
 import RemoveEntityModal from '../../../../Modal/RemoveEntityModal/RemoveEntityModal';
-import { deleteClient } from '../../../../../api/deleteClient';
 import { useNavigate } from 'react-router-dom';
 import { deleteClientSession } from '../../../../../api/deleteClientSession';
 import TextButton from '../../../../Buttons/TextButton/TextButton';

@@ -9,10 +9,13 @@ interface Props {
   fieldName?: string;
   setValue: Dispatch<SetStateAction<string>>;
   value: string;
+  disabled?: boolean;
   errorMessage?: string;
   startIcon?: string;
   onKeyDown?: (event: React.KeyboardEvent) => void;
   style?: string;
+  mb?: string;
+  mt?: string;
 }
 
 const FormField: React.FC<Props> = (props) => {
@@ -22,7 +25,8 @@ const FormField: React.FC<Props> = (props) => {
 
   const errorClass = props.errorMessage ? styles.errorBorder : '';
   return (
-    <div className={styles.container}>
+    <div className={styles.container}
+         style={{marginBottom: props.mb ? props.mb : '0', marginTop: props.mt ? props.mt : '0'}}>
       {props.fieldName && <label htmlFor={props.fieldName} className={styles.label}>
         {props.fieldName}{' '}
         {!props.isRequired && (
@@ -31,6 +35,8 @@ const FormField: React.FC<Props> = (props) => {
       </label>}
       <div className={styles.inputContainer}>
         <input
+
+          disabled={props.disabled}
           onKeyDown={props.onKeyDown}
           type={props.type}
           placeholder={props.placeholder}

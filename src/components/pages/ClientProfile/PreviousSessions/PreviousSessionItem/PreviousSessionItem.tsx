@@ -6,7 +6,7 @@ import FillButton from '../../../../Buttons/FillButton/FillButton';
 import { Text } from '@pixi/react';
 import TextButton from '../../../../Buttons/TextButton/TextButton';
 import smallTrashIcon from '../../../../../assets/vectors/clients/smallTrash.svg';
-import documentIcon from  '../../../../../assets/vectors/clients/documentIcon.svg';
+import documentIcon from '../../../../../assets/vectors/clients/documentIcon.svg';
 import { deleteClient } from '../../../../../api/deleteClient';
 import { useNavigate } from 'react-router-dom';
 import RemoveEntityModal from '../../../../Modal/RemoveEntityModal/RemoveEntityModal';
@@ -23,16 +23,17 @@ interface Props {
   id: string;
   started_at: number;
   finished_at: number;
+  name?: string;
   params: SessionParams;
 }
+
 const PreviousSessionItem: React.FC<Props> = (props) => {
   const navigate = useNavigate();
   const [editNotes, setEditNotes] = useState<boolean>(false);
 
 
-
   const handleNavigateToSession = () => {
-    navigate(`/sessionInfo`, { state: { id: props.id } });
+    navigate(`/sessionInfo`, {state: {id: props.id}});
   }
   const handleEditNotes = () => {
     setEditNotes(!editNotes);
@@ -47,6 +48,7 @@ const PreviousSessionItem: React.FC<Props> = (props) => {
       <div className={styles.container}>
         <div className={styles.details}>
           <div className={styles.info}>
+            {props.name && <p className={styles.name}>{props.name}</p>}
             <div className={styles.baseInfo}>
               <h4>{moment.unix(props.started_at).format('dddd, D MMM ’YY')}</h4>
               <p>{moment.unix(props.started_at).format('h:mm a')}</p>

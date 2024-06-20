@@ -11,8 +11,7 @@ export const useShowDisclaimerModal = () => {
     } else {
       setShowModal(false);
     }
-    console.log(2)
-  }, [localStorage.getItem('disclaimerKey')]); // Added dependency
+  }, [localStorage.getItem('disclaimerKey')]);
 
   return {showModal, setShowModal};
 };

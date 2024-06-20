@@ -5,7 +5,6 @@
   align-items: center;
   gap: $spacing-2xl;
   justify-content: center;
-
   border: none;
   background-color: $buttonBackgroundModalColor;
   width: 100%;
@@ -77,4 +76,8 @@
   background-color: $buttonBackgroundDisabledModalColor;
   border-color: $iconBorderModalColor;
   color: $disabledButtonTextColor;
+}
+.fitContent{
+  width: fit-content;
+  padding: 10px 16px;
 }

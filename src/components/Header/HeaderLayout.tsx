@@ -5,19 +5,26 @@ import { headerTitle } from "../../utils/headerTitle";
 import HeaderAvatar from "./HeaderAvatar/HeaderAvatar";
 import HeaderButton from "./HeaderButton/HeaderButton";
 import styles from "./styles.module.scss";
+import { useModal } from '../Modal/ModalContext';
+import PremiumInfoModal from '../Modal/PremiumInfoModal/PremiumInfoModal';
 
 interface Props {
   children: ReactNode;
 }
 
 const HeaderLayout: React.FC<Props> = (props) => {
+  const { openModal } = useModal();
+
+  const handleOpenModal = () => {
+    openModal(PremiumInfoModal);
+  };
   const location = useLocation();
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <h1 className={styles.title}>{headerTitle(location.pathname)}</h1>
         <div className={styles.side}>
-          <HeaderButton onClick={() => alert("Click")} title="Upgrade plan">
+          <HeaderButton onClick={handleOpenModal} title="Upgrade plan">
             <ZapIcon />
           </HeaderButton>
           <HeaderAvatar />

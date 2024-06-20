@@ -12,5 +12,6 @@ export interface LoginResponse {
     last_name: string;
     title: string;
     practise_name: string;
+    passwordSet: boolean;
   };
 }

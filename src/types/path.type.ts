@@ -8,4 +8,5 @@ export enum Paths {
   GUIDEDSESSIONS = "/guidedSessions",
   AFFIRMATIONS = "/affirmations",
   PREVIEWAUDIO = "/previewAudio",
+  SETTINGS = "/settings",
 }

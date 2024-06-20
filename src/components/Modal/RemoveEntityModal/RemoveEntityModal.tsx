@@ -1,7 +1,6 @@
 import React from 'react';
 import FormBackdrop from '../../Backdrop/FormBackdrop/FormBackdrop';
 import FillButton from '../../Buttons/FillButton/FillButton';
-import HeaderModal from './HeaderModal/HeaderModal';
 import styles from './styles.module.scss';
 import trashIcon from '../../../assets/vectors/clients/trash.svg';
 

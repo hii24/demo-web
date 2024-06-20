@@ -1,5 +1,5 @@
-import React, { MouseEventHandler, ReactNode } from "react";
-import styles from "./styles.module.scss";
+import React, { MouseEventHandler, ReactNode } from 'react';
+import styles from './styles.module.scss';
 
 interface Props {
   buttonText: string;
@@ -10,18 +10,24 @@ interface Props {
   isCopyButton?: boolean;
   style?: string;
   error?: boolean;
+  fitContent?: boolean;
+  gap?: string;
+  childrenAfter?: boolean;
 }
 
 const FillButton: React.FC<Props> = ({
-  buttonText,
-  onClick,
-  isWhiteButton = false,
-  children,
-  inactive,
-  isCopyButton,
-  style,
-  error
-}) => {
+                                       buttonText,
+                                       onClick,
+                                       isWhiteButton = false,
+                                       children,
+                                       inactive,
+                                       isCopyButton,
+                                       style,
+                                       gap,
+                                       fitContent,
+                                       childrenAfter,
+                                       error
+                                     }) => {
   const buttonClass = isWhiteButton
     ? `${styles.button} ${styles.white}`
     : styles.button;
@@ -31,12 +37,14 @@ const FillButton: React.FC<Props> = ({
     : buttonClass;
   return (
     <button
-      className={`${inactiveClass} ${isCopyButton ? styles.copy : ""} ${error ? styles.red : ''} ${style}`}
+      className={`${inactiveClass} ${isCopyButton ? styles.copy : ''} ${error ? styles.red : ''} ${fitContent ? styles.fitContent : ''} ${style} `}
       onClick={onClick}
+      style={{gap: gap ? gap : '16px'}}
       disabled={inactive}
     >
-      {children}
+      {childrenAfter ? null : children}
       {buttonText}
+      {childrenAfter ? children : null}
     </button>
   );
 };

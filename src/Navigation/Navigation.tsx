@@ -28,8 +28,10 @@ import { subscription } from '../api/subscription';
 import sessionStore from '../store/sessionStore';
 import DefaultLoader from '../components/DefaultLoader/DefaultLoader';
 import Loader from '../components/Loader/Loader';
+import SettingsPage from '../components/pages/Settings/Settings';
 
 function RoutesWithLayout() {
+
   return (
     <>
       <Sidebar/>
@@ -107,6 +109,14 @@ function RoutesWithLayout() {
           }
         />
         <Route
+          path="settings"
+          element={
+            <HeaderLayout>
+              <SettingsPage/>
+            </HeaderLayout>
+          }
+        />
+        <Route
           path="history"
           element={
             <HeaderLayout>
@@ -143,11 +153,12 @@ function RouterWithBackdrop() {
 
 const Navigation = observer(() => {
   const isAuthenticated = AuthStore.isAuthenticated;
+
   useEffect(() => {
-    isAuthenticated && subscription();
+    AuthStore.init();
   }, []);
   if (authStore.loading) {
-    return <Loader />
+    return <Loader/>
   }
 
   return (
@@ -165,6 +176,7 @@ const Navigation = observer(() => {
               <Route path="sessionInfo" Component={SessionInfo}/>
               <Route path="clientProfile" Component={ClientProfile}/>
               <Route path="history" Component={HistoryPage}/>
+              <Route path="settings" Component={SettingsPage}/>
             </Route>
             <Route path="/session" Component={SessionPage}/>
 

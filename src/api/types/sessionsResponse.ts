@@ -18,6 +18,10 @@ export interface ISessionData {
   params: Params;
   finished_at: number;
   notes?: string;
+  client?: {
+    id: string;
+    name: string;
+  };
 }
 
 interface Link {

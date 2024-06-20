@@ -69,14 +69,15 @@ const AffirmationItem: React.FC<IAffirmationItemProps> = (props) => {
       setPlay(false);
     };
   }, []);
-  useEffect(() => {
 
+  useEffect(() => {
     if (props.currentAffirmation !== props.id) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
       setPlay(false);
     }
   }, [props.currentAffirmation]);
+
   const handlePlayClick = (e: any) => {
     if (!authStore.premium) {
       return;

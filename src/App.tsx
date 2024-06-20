@@ -3,6 +3,7 @@ import './App.css';
 import Navigation from './Navigation/Navigation';
 import FormBackdrop from './components/Backdrop/FormBackdrop/FormBackdrop';
 import MarketPlaceModal from './components/Modal/MarketPlaceModal/MarketPlaceModal';
+import { ModalProvider } from './components/Modal/ModalContext';
 
 function App() {
   const [width, setWidth] = useState<number>(window.innerWidth);
@@ -27,7 +28,9 @@ function App() {
           <MarketPlaceModal/>
         </FormBackdrop>
       )}
-      <Navigation/>
+      <ModalProvider>
+        <Navigation/>
+      </ModalProvider>
     </div>
   );
 }

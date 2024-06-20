@@ -1,10 +1,13 @@
-import React from "react";
-import styles from "./styles.module.scss";
+import React from 'react';
+import styles from './styles.module.scss';
+import HistoryFree from './HistoryFree/HistoryFree';
+import authStore from '../../../store/store';
+import HistoryList from './HistoryList/HistoryList';
 
 const HistoryPage: React.FC = () => {
   return (
     <div className={styles.container}>
-      <h2>History</h2>
+      {authStore.premium ? <HistoryList/> : <HistoryFree/>}
     </div>
   );
 };

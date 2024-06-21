@@ -5,6 +5,9 @@ import styles from './styles.module.scss';
 import CrossIcon from '../../../assets/vectors/x-close.svg';
 import { PlanList } from './PlanList/PlanList';
 import { paymentCreateSubscription } from '../../../api/paymentCreateSubscription';
+import { updatedSubscriptionPlan } from '../../../api/updatedSubscriptionPlan';
+import { getSubscriptionInvoice } from '../../../api/getSubscriptionInvoice';
+import authStore from '../../../store/store';
 
 interface Props {
   closeModal: () => void;
@@ -13,7 +16,8 @@ interface Props {
 const ChoosePlanModal: React.FC<Props> = (props) => {
   const [selectedPlan, setSelectedPlan] = React.useState<string>('monthly');
   const onSubmit = async () => {
-    paymentCreateSubscription(selectedPlan).then(
+    updatedSubscriptionPlan(selectedPlan);
+    !authStore.premium && getSubscriptionInvoice().then(
       res => {
         window.open(res.data?.url, '_blank');
       }

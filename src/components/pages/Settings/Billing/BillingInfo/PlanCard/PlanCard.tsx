@@ -7,6 +7,7 @@ import TextButton from '../../../../../Buttons/TextButton/TextButton';
 import authStore from '../../../../../../store/store';
 import { useModal } from '../../../../../Modal/ModalContext';
 import ChoosePlanModal from '../../../../../Modal/ChoosePlanModal/ChoosePlanModal';
+import { deleteSubscription } from '../../../../../../api/deleteSubscription';
 
 const PlanCard: React.FC = () => {
 
@@ -16,7 +17,7 @@ const PlanCard: React.FC = () => {
     openModal(ChoosePlanModal);
   };
   const handleCancel = () => {
-    console.log('Cancel subscription');
+    deleteSubscription();
   }
   return (
     <div className={styles.container}>
@@ -24,7 +25,7 @@ const PlanCard: React.FC = () => {
         <div className={styles.cardInfo}>
           {authStore.premium ?
             <>
-              <h4 className={styles.title}>Premium plan<span>{authStore.subscription?.plan.type || ''}</span></h4>
+              <h4 className={styles.title}>Premium plan<span>{authStore.subscription?.plan.name || ''}</span></h4>
               <p className={styles.subtitle}>Edit your billing information or email.</p>
             </> :
             <>

@@ -14,7 +14,7 @@ const SettingsPage: React.FC = observer(() => {
   const tabs = [
     { label: 'My profile', id: 0 },
     { label: 'Security', id: 1 },
-    { label: 'Security', id: 2 },
+    { label: 'Billing', id: 2 },
   ];
 
   return (

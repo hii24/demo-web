@@ -20,8 +20,9 @@ interface Subscription {
   status: boolean;
   payer_id: string;
   plan: {
+    key: string;
     name: string;
-    type: string;
+    period: string;
     price: number;
   };
   payment_service: string;

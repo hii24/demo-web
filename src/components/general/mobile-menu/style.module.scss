@@ -1,0 +1,87 @@
+@import "src/styles/variables.module.scss";
+
+.btn {
+  position: relative;
+  z-index: 140;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    transition: 0.15s;
+  }
+
+  span:nth-child(1) {
+    transform: translateY(-6px);
+  }
+
+  span:nth-child(2) {
+    transform: translateY(0px);
+  }
+
+  span:nth-child(3) {
+    transform: translateY(6px);
+  }
+
+  &Active {
+    span:nth-child(1) {
+      transform: rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.list {
+  background: #15483c;
+  z-index: 139;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+  transform: translateY(-100%);
+  transition: 0.15s;
+
+  &Active {
+    transform: translateY(0);
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $loaderTextColor;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  padding-left: $spacing-lg;
+  padding-right: $spacing-lg;
+
+  transition: color 150ms ease-in;
+
+  &:hover {
+    color: $linkSessionHoverColor;
+  }
+}

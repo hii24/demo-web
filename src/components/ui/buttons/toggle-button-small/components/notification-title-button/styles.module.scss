@@ -1,0 +1,49 @@
+@import "src/styles/variables.module";
+
+.container {
+  position: relative;
+}
+
+.button {
+  padding: 0;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+
+  &:hover ~ .notification {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.notification {
+  visibility: hidden;
+  padding: $spacing-md $spacing-lg;
+  background-color: #0c111d;
+  position: absolute;
+  border-radius: $radius-md;
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 152px;
+  max-width: 200px;
+  top: -26px;
+  left: 50%;
+  opacity: 0;
+
+  transition: opacity 150ms ease-in, visibility 150ms ease-in;
+}
+
+.text {
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -6px;
+  transform: translateX(-50%);
+  left: 50%;
+}

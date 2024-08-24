@@ -1,0 +1,23 @@
+@import "../../../../../styles/variables.module";
+
+.button {
+  //   padding: 38px 83.5px;
+  padding: $spacing-3xl;
+  width: 100%;
+
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(45deg, #144037 0%, #207b63 100%);
+
+  color: #f9eecc;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.33333;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+}

@@ -1,0 +1,108 @@
+@import "../../../styles/variables.module";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 6px;
+
+  width: 100%;
+  position: relative;
+}
+
+.inputContainer {
+  display: flex;
+  position: relative;
+}
+
+.inputIcon {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+}
+
+.label {
+  color: $secondaryTextModalColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.42857;
+}
+
+.input {
+  padding: 10px 14px;
+  flex: 1;
+  border-radius: $radius-md;
+  border: 1px solid $inputBorderColor;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  color: $secondaryTextModalColor;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  outline: none;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+  transition: border-color 250ms linear;
+
+  &::placeholder {
+    color: $placeholderModalColor;
+  }
+
+  &:focus-within {
+    border-color: $tertiaryButtonTextModalColor;
+  }
+}
+
+.input::placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: $settingsBlockBorderColor;
+}
+
+.inputWithStartIcon {
+  padding-left: 42px;
+}
+
+.errorBorder {
+  border-color: $errorInputColor;
+}
+
+.errorMessage {
+  margin: 0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857;
+  color: #d92d20;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.errorIcon {
+  position: absolute;
+  right: 12px;
+  top: 42px;
+}
+
+.optional {
+  color: $placeholderModalColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.42857;
+}
+
+.textarea {
+  overflow-y: scroll;
+  height: 72px;
+  resize: none;
+}

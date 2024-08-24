@@ -1,0 +1,9 @@
+@import "../../../../styles/variables.module";
+
+.text {
+  color: $greetingsTextColor;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+}

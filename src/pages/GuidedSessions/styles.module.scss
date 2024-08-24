@@ -1,0 +1,11 @@
+@import "../../styles/variables.module";
+
+.container {
+}
+.block{
+  display: flex;
+  gap: $spacing-xl;
+  margin-bottom: $spacing-4xl;
+  max-width: 684px;
+  flex-wrap: wrap;
+}

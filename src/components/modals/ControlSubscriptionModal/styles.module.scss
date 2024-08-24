@@ -1,0 +1,107 @@
+@import "../../../styles/variables.module.scss";
+
+.modalContainer {
+  width: 343px;
+  background-color: $primaryBackgroungColor;
+  padding: $spacing-xl 0;
+  opacity: 1;
+  border-radius: $radius-xl;
+
+  background-image: $modalRemoveClientBackground;
+  background-repeat: no-repeat;
+}
+
+.modalContainer > h3 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  color: $primaryTextModalColor;
+  text-align: left;
+  padding-left: $spacing-xl;
+  padding-right: $spacing-xl;
+  margin-top: $spacing-lg;
+}
+
+.modalContainer > p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: $tertiaryTextModalColor;
+  text-align: left;
+  padding-left: $spacing-xl;
+  padding-right: $spacing-xl;
+  margin-top: $spacing-sm;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: inherit;
+  border: none;
+  min-width: auto !important;
+  cursor: pointer;
+}
+
+.subContainer {
+  border-bottom: 1px solid $buttonWhiteBorderColor;
+}
+
+.formContainer {
+  padding: $spacing-2xl $spacing-xl;
+
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+  align-items: flex-start;
+}
+
+.descriptionField {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  align-items: flex-start;
+}
+
+.header {
+  display: flex;
+
+  padding-left: $spacing-xl;
+  padding-right: $spacing-xl;
+  justify-content: space-between;
+}
+
+.desctiprionLength {
+  color: $tertiaryTextModalColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857;
+}
+
+.buttonsContainer {
+  padding-top: $spacing-xl;
+  padding-left: $spacing-xl;
+  padding-right: $spacing-xl;
+
+  display: flex;
+  flex-direction: row;
+  gap: $spacing-lg;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.closeBtn {
+  font-size: 16px;
+  padding: 10px 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}

@@ -1,0 +1,18 @@
+@import "src/styles/variables.module";
+
+.container {
+  //   width: 100%;
+  margin-right: 15px;
+  border-bottom: 1px solid $settingsBlockBorderColor;
+}
+
+.settingsBlock {
+  padding: $spacing-lg 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: $spacing-xl;
+  overflow: hidden;
+}

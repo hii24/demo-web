@@ -1,0 +1,132 @@
+@import "../../styles/variables.module";
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 684px;
+}
+
+.container p, h3 {
+  margin: 0;
+}
+
+.container h3 {
+  color: $primaryBrandTextColor;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.videoInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: $spacing-lg;
+}
+
+.container p {
+  color: $greetingsTextColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+
+.videoInfo span {
+  position: relative;
+  margin-right: $spacing-margin-20;
+
+}
+
+.videoInfo span::before {
+  content: " ";
+  position: absolute;
+  background: $headerButtonTextColor;
+  height: 5px;
+  width: 5px;
+  right: -12px;
+  top: 6px;
+  border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-top: $spacing-sm;
+}
+
+.svg {
+  width: 40px;
+  height: 40px;
+}
+
+.img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+
+.playBtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+  background: $sidebarActiveBackgroundColor;
+  border: 1px solid $sidebarBorderColor;
+  z-index: 2;
+  padding: $spacing-xs $spacing-lg;
+  border-radius: $radius-2xl;
+
+}
+
+.playBtn p {
+  color: $secondaryTextModalColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.content {
+  overflow: hidden;
+  border-radius: $radius-md;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 196px;
+}
+
+
+.goBack {
+  cursor: pointer;
+  display: flex;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-margin-20;
+}
+.goBack p{
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+.audio{
+  margin: $spacing-margin-20 0;
+  width: 100%;
+}
+
+.description{
+  display: flex;
+  color: $tertiaryTextModalColor!important;
+  padding-bottom: $spacing-margin-20;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}

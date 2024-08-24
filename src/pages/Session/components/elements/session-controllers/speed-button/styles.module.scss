@@ -1,0 +1,83 @@
+@import "src/styles/variables.module";
+
+.container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: $radius-md;
+  border: 1px solid $buttonWhiteBorderColor;
+  overflow: hidden;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-lg;
+  border: none;
+
+  background-color: $buttonWhiteBackgroundColor;
+
+  transition: background-color 150ms ease-in, color 150ms ease-in;
+
+  cursor: pointer;
+
+  &.left {
+    border-right: 1px solid $buttonWhiteBorderColor;
+  }
+
+  &.right {
+    border-left: 1px solid $buttonWhiteBorderColor;
+  }
+
+  &:hover {
+    background-color: $buttonWhiteHoverColor;
+  }
+
+  &:disabled {
+    color: $disabledButtonTextColor;
+  }
+}
+
+.info {
+  //   padding: $spacing-lg $spacing-xl;
+  width: 106px;
+  background-color: $buttonWhiteBackgroundColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.down {
+  transform: rotate(-90deg);
+}
+
+.up {
+  transform: rotate(90deg);
+}
+
+.text {
+  color: $secondaryTextModalColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.42857;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.label {
+  width: 24px;
+  height: 20px;
+  color: $speedCountColor;
+  //   padding: $spacing-xxs $spacing-md;
+  border-radius: $radius-lg;
+  border: 1.5px solid $speedCountColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

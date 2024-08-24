@@ -1,0 +1,55 @@
+@import "src/styles/variables.module";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2xl;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoContainer {
+  display: flex;
+  gap: $spacing-sm;
+  flex-direction: row;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.text {
+  color: #fff;
+  width: fit-content;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: start;
+}
+
+.link {
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration-line: underline;
+}
+
+.instructionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.instruction {
+  color: $buttonWhiteBackgroundColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.42857;
+  text-decoration-line: underline;
+}

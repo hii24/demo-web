@@ -1,0 +1,57 @@
+@import "../../../styles/variables.module";
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: $spacing-md;
+  border-radius: $radius-md;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.container:hover{
+  background-color: $buttonWhiteHoverColor;
+}
+.container:hover.isActive{
+  background-color: $gettingStartedBackgroundColor;
+}
+.isActive{
+  background-color: $gettingStartedBackgroundColor;
+}
+
+.info{
+  display: flex;
+  align-items: center;
+}
+.info p{
+  margin: 0;
+  margin-left: $spacing-lg;
+  color: $primaryBrandTextColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+.checkbox{
+  height: 18px;
+  width: 18px;
+  border-radius: $radius-2xl;
+  border: 1px solid $buttonWhiteBorderColor;
+}
+.isActive .checkbox{
+  height: 8px;
+  width: 8px;
+  border-radius: $radius-2xl;
+  border: 6px solid $headerButtonBorderColor;
+}
+.btnWrapper {
+  position: absolute;
+  bottom: $spacing-7xl;
+  left: 0;
+  right: 0;
+  margin-left: 312px;
+  max-width: 684px;
+  display: flex;
+  justify-content: center;
+}

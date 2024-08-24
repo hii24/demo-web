@@ -1,0 +1,79 @@
+@import "../../../../../../styles/variables.module.scss";
+
+.container {
+  position: fixed;
+  bottom: 0;
+  width: 100dvw;
+  transition: 0.15s;
+}
+
+.settingsBtn {
+  position: absolute;
+  top: -27px;
+  color: #FFF;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background: #272E3D;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+
+.bottomBlock {
+  position: relative;
+  height: 40px;
+  background: #272E3D;
+  padding: $spacing-xl $spacing-lg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottomLeft {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.bottomRight {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  justify-content: flex-end;
+}
+
+
+.modal {
+  box-sizing: border-box;
+  padding: 5px 20px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background: #272E3D;
+  height: 50px;
+  width: 100vw;
+  z-index: 143234;
+}
+
+.modalTitle {
+  color: #fff;
+}
+
+.topBlock {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 16px;
+  padding: 6px $spacing-lg;
+}
+
+.passes, .timer {
+  color: #98A2B3;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}

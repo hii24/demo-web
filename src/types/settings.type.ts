@@ -1,4 +1,5 @@
-export enum SizeEnum {
+/*
+  export enum SizeEnum {
   SMALL = 20,
   MEDIUM = 26,
   LARGE = 35,
@@ -38,6 +39,7 @@ export enum PositionEnum {
   TOP = "Top",
   BOTTOM = "Bottom",
 }
+ */
 
 export enum SoundEnum {
   CHIME = "Chime",

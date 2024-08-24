@@ -1,0 +1,19 @@
+@import "../../../styles/variables.module";
+
+.container {
+  display: flex;
+  gap: $spacing-md;
+  margin-bottom: $spacing-4xl;
+}
+.filterWrapper{
+  cursor: pointer;
+  box-sizing: border-box;
+  background: $clientButtonHoverBackgroundColor;
+  color: $greetingsTextColor;
+  padding: $spacing-md $spacing-lg;
+  border-radius: $radius-sm;
+  font-weight: 600;
+}
+.isActive {
+  border: 1px solid $headerButtonBorderColor;
+}

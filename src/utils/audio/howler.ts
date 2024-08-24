@@ -7,7 +7,7 @@ export const soundLeft = new Howl({
   volume: 0.8,
 
   onend: function () {
-    console.log("Finished playing");
+
   },
 });
 
@@ -18,7 +18,7 @@ export const soundRight = new Howl({
   volume: 0.8,
 
   onend: function () {
-    console.log("Finished playing");
+
   },
 });
 

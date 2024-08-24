@@ -1,0 +1,23 @@
+.wrap {
+  display: grid;
+}
+
+.topBar {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.actionsWrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.actions {
+  width: 350px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 12px;
+}

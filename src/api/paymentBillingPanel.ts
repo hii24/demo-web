@@ -2,7 +2,7 @@ import axios from 'axios';
 import { baseApiUrl } from './config';
 import { Response } from './types/response.interface';
 import AuthStore from '../store/store';
-import sessionStore from '../store/sessionStore';
+import sessionStore from '../store/session-store';
 
 export async function paymentBillingPanel(): Promise<Response<any>> {
   sessionStore.setLoading(true);
@@ -22,7 +22,7 @@ export async function paymentBillingPanel(): Promise<Response<any>> {
       success: true,
     };
   } catch (error: any) {
-    console.log(error);
+    console.warn(error);
     return {
       data: null,
       statusCode: error.response.status || 0,

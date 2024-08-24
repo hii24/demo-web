@@ -1,0 +1,33 @@
+@import "../../../../styles/variables.module";
+
+.container {
+  max-width: 652px;
+  background: $toggleButtonDisabledBackgroundColor;
+  border-radius: $radius-xl;
+  padding: $spacing-lg $spacing-xl;
+  display: flex;
+  gap: $spacing-lg;
+  border: 1px solid $buttonWhiteBorderColor;
+  margin: $spacing-lg 0;
+}
+
+.container > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.container span:first-child {
+  width: 138px;
+  height: 22px;
+  background: $disabledButtonTextColor;
+  border-radius: $radius-sm;
+}
+.container span:last-child {
+  width: 100%;
+  height: 16px;
+  background: $buttonWhiteBorderColor;
+  border-radius: $radius-sm;
+}

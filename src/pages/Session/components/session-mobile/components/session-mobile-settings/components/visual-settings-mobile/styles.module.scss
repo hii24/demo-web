@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+  height: 100%;
+}
+
+.content {
+  display: grid;
+  row-gap: 20px;
+}
+
+
+.right {
+  padding-top: 50px;
+  margin-top: -16px;
+  overflow-y: scroll;
+  height: 100dvh;
+}
+
+.preview {
+  margin-top: 40px;
+  display: flex;
+  height: 240px;
+  width: 100%;
+  background: #0C111D;
+  position: relative;
+}

@@ -1,0 +1,87 @@
+@import "../../../../styles/variables.module";
+
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  padding: $spacing-md $spacing-lg;
+  border-radius: $radius-sm;
+  color: $secondaryTextModalColor;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  border: none;
+  background-color: $buttonWhiteBackgroundColor;
+
+  transition: background-color 250ms ease-in, color 250ms ease-in;
+
+  cursor: pointer;
+}
+
+.buttonInner {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+}
+
+.isActive {
+  background-color: $sidebarActiveBackgroundColor;
+  color: $sidebarActiveLinkColor;
+}
+
+.icon {
+  transition: transform 250ms ease-in;
+}
+
+.activeIcon {
+  transform: rotate(180deg);
+}
+
+.dropdownContent {
+  display: none;
+  width: 100%;
+  opacity: 0;
+  min-width: 160px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: $spacing-md 0;
+  gap: $spacing-xs;
+
+  color: black;
+
+  a {
+    padding: $spacing-md 0;
+    color: black;
+    text-decoration: none;
+    display: block;
+
+    color: $secondaryTextModalColor;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  &.active {
+    opacity: 1;
+    display: flex;
+    transition: opacity 0.5s ease-in;
+  }
+}
+
+.navLink {
+
+  display: flex;
+  color: #182230;
+  text-decoration: none;
+  padding: 8px 0 8px 48px !important;
+  text-align: left;
+  width: calc(100% - 48px);
+  &:hover {
+    border-radius: $radius-sm;
+    background-color: #f9fafb;
+  }
+}

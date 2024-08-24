@@ -1,0 +1,19 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.dec {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.text {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  color: #98A2B3;
+}

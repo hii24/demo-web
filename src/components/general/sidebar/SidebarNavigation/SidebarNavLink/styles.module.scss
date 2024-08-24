@@ -1,0 +1,22 @@
+@import "../../../../../styles/variables.module";
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+  text-decoration: none;
+  padding: $spacing-md $spacing-lg;
+  border-radius: $radius-sm;
+  color: $secondaryTextModalColor;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+
+  transition: background-color 250ms ease-in, color 250ms ease-in;
+}
+
+.isActive {
+  background-color: $sidebarActiveBackgroundColor;
+  color: $sidebarActiveLinkColor;
+}

@@ -28,14 +28,14 @@ export async function registartionUser(
 
   try {
     const response = await axios.post(`${baseApiUrl}/auth/signup/email`, data);
-    console.log("Response:", response.data);
+
     return {
       data: response.data,
       statusCode: response.status,
       success: true,
     };
   } catch (error: any) {
-    console.log(error);
+    console.warn(error);
     return {
       data: null,
       statusCode: error.response.status || 0,

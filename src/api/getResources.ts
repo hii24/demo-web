@@ -42,7 +42,7 @@ export async function getResources(): Promise<Response<Data>> {
       success: true,
     };
   } catch (error: any) {
-    console.log(error);
+    console.warn(error);
     return {
       data: null,
       statusCode: error.response.status || 0,

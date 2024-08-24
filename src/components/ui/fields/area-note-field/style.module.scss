@@ -1,0 +1,29 @@
+.area {
+  width: 100%;
+  resize: none;
+  height: 90px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #D0D5DD;
+  background: #FFF;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+}
+
+.valueLength {
+  text-align: left;
+  color:  #475467;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.noteText {
+  text-align: left;
+  margin-top: 4px;
+  color:  #475467;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}

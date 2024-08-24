@@ -1,0 +1,83 @@
+@import "../../../../styles/variables.module";
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: $spacing-2xl;
+  justify-content: center;
+  border: none;
+  background-color: $buttonBackgroundModalColor;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 0;
+  border-radius: $radius-md;
+
+  color: $buttonPrimaryTextModalColor;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+
+  transition: background-color 250ms ease-in, box-shadow 150ms ease-in;
+
+  &:hover {
+    background-color: $buttonBackgroundHoverModalColor;
+  }
+
+  &:disabled {
+    background-color: $buttonBackgroundDisabledModalColor;
+  }
+
+  &:active {
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05),
+      0px 0px 0px 4px rgba(158, 119, 237, 0.24);
+  }
+}
+.button.red {
+
+  background-color: $errorButtonPrimaryErrorBg;
+
+  color: $buttonPrimaryTextModalColor;
+
+  &:hover {
+    background-color: $errorButtonPrimaryErrorBgHover;
+  }
+
+  &:disabled {
+    background-color: $buttonBackgroundDisabledModalColor;
+  }
+
+  &:active {
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px rgba(240, 68, 56, 0.24);
+  }
+}
+.copy {
+  gap: $spacing-sm;
+}
+
+.white {
+  background-color: $buttonWhiteBackgroundColor;
+  color: $secondaryTextModalColor;
+  border: 1px solid $buttonWhiteBorderColor;
+
+  transition: background-color 250ms ease-in, box-shadow 150ms ease-in;
+
+  &:hover {
+    background-color: $buttonWhiteHoverColor;
+  }
+
+  &:active {
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05),
+      0px 0px 0px 4px rgba(152, 162, 179, 0.14);
+  }
+}
+
+.inactive {
+  background-color: $buttonBackgroundDisabledModalColor;
+  border-color: $iconBorderModalColor;
+  color: $disabledButtonTextColor;
+}
+.fitContent{
+  width: fit-content;
+  padding: 10px 16px;
+}

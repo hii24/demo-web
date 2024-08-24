@@ -1,0 +1,48 @@
+@import "../../../styles/variables.module";
+
+.container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: $spacing-xl;
+}
+
+.block {
+  box-sizing: border-box;
+  padding: $spacing-3xl;
+  background-color: aqua;
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid $headerButtonTextColor;
+  background-color: $gettingStartedBackgroundColor;
+}
+
+.image {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 50%;
+}
+
+.text {
+  color: $greetingsTextColor;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}

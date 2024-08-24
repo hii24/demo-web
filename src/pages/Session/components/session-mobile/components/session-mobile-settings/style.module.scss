@@ -1,0 +1,22 @@
+.wrap {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background: #272e3d;
+  z-index: 200;
+  padding: 16px 24px;
+  transform: translateY(-100%);
+  transition: 0.15s;
+  display: grid;
+  column-gap: 16px;
+  overflow: hidden;
+}
+
+.wrapActive {
+  transform: translateY(0);
+}
+
+

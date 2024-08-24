@@ -2,6 +2,14 @@
 import { makeAutoObservable } from 'mobx';
 import { subscription } from '../api/subscription';
 
+export enum PAYMENT_OS {
+  WEB = 1,
+  IOS = 2,
+  ANDROID = 3
+}
+
+type IPaymentOS = PAYMENT_OS.IOS | PAYMENT_OS.ANDROID | PAYMENT_OS.WEB;
+
 interface User {
   uid: string;
   email: string;
@@ -31,9 +39,9 @@ interface Subscription {
 }
 
 class AuthStore {
+  isInit: boolean = false
   token = localStorage.getItem('authToken');
   user: User | null = JSON.parse(localStorage.getItem('user') || 'null');
-
   loading = false;
   subscription: Subscription | null = null;
 
@@ -42,10 +50,23 @@ class AuthStore {
   }
 
   async init() {
+    this.isInit = true
     if (this.isAuthenticated && !this.subscription) {
       await subscription();
     }
+  }
 
+  get paymentOS(): IPaymentOS {
+    switch (this.subscription?.payment_service) {
+      case 'stripe':
+        return PAYMENT_OS.WEB;
+      case 'ios':
+        return PAYMENT_OS.IOS;
+      case 'android':
+        return PAYMENT_OS.ANDROID;
+      default:
+        return PAYMENT_OS.WEB;
+    }
   }
 
   get premium() {

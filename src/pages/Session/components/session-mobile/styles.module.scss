@@ -1,0 +1,14 @@
+@import "../../../../styles/variables.module";
+
+
+
+.canvasBlock {
+  position: relative;
+  width: 100dvw;
+  height: 100dvh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-size: contain;
+}

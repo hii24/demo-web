@@ -1,0 +1,47 @@
+@import "../../../../../../../../../styles/variables.module";
+
+.link {
+  text-decoration: none;
+  color: $loaderTextColor;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  padding-left: $spacing-lg;
+  padding-right: $spacing-lg;
+
+  transition: color 150ms ease-in;
+
+  &:hover {
+    color: $linkSessionHoverColor;
+  }
+}
+
+.fillLink {
+  background-color: $buttonWhiteBackgroundColor;
+
+  text-decoration: none;
+  color: $secondaryTextModalColor;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 10px 14px;
+  border-radius: $radius-md;
+  border: 1px solid $fillLinkButtonBorderColor;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  box-sizing: border-box;
+
+  transition: color 150ms ease-in, background-color 150ms ease-in,
+    box-shadow 150ms ease-in;
+
+  &:hover {
+    color: $fillLinkButtonHoverColor;
+    background-color: $buttonWhiteHoverColor;
+  }
+
+  &:active {
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05),
+      0px 0px 0px 4px rgba(152, 162, 179, 0.14);
+  }
+}

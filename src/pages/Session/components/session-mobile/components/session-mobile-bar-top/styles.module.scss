@@ -1,0 +1,25 @@
+@import "../../../../../../styles/variables.module.scss";
+
+.container {
+  transition: 0.15s;
+  box-sizing: border-box;
+  padding: $spacing-xl $spacing-lg;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 130;
+}
+
+.leftWrap {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.rightWrap {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}

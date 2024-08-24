@@ -1,0 +1,30 @@
+@import "src/styles/variables.module";
+
+.wrap {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+  background: rgba(0,0,0, 0.5);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 612px;
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: $radius-xl;
+  border: 1px solid grey;
+}
+
+.close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}

@@ -1,0 +1,36 @@
+.wrap {
+  display: grid;
+  display: grid;
+  row-gap: 16px;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.titleWrap {
+  text-align: left;
+}
+
+.text {
+  margin-top: -10px;
+  color: #475467;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.actionsWrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.actions {
+  width: 350px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 12px;
+}

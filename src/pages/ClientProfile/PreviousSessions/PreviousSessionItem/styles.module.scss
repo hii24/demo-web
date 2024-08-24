@@ -1,0 +1,137 @@
+@import "../../../../styles/variables.module";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 684px;
+  border: 1px solid $iconBorderModalColor;
+  border-radius: $radius-xl;
+}
+.name {
+  text-align: left;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  color: $tertiaryButtonTextModalColor;
+  margin-bottom: $spacing-lg;
+}
+.container p {
+  margin: 0;
+}
+
+.container > h4 {
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  color: $secondaryTextModalColor;
+}
+
+.details {
+  padding: $spacing-margin-20 $spacing-xl;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $sidebarBorderColor;
+}
+
+.baseInfo {
+  display: flex;
+  justify-content: space-between;
+  height: 24px;
+}
+
+.baseInfo h4 {
+  margin: 0;
+  color: $primaryTextModalColor;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: $spacing-xs;
+}
+
+.baseInfo p {
+  color: $tertiaryTextModalColor;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.duration {
+  color: $tertiaryTextModalColor;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.duration img {
+  margin-right: 2px;
+}
+
+.params {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.params > div {
+  display: flex;
+  gap: $spacing-xs;
+  flex-direction: column;
+  align-items: start;
+  flex: 1;
+  padding-top: $spacing-lg;
+  color: $tertiaryTextModalColor;
+}
+
+.params p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.params span {
+  font-weight: 600;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing-xl;
+  border-top: 1px solid $sidebarBorderColor;
+}
+
+.btns button:first-child {
+  display: flex;
+  align-items: center;
+  color: $tertiaryTextModalColor;
+
+  img {
+    margin-right: $spacing-xs;
+  }
+}
+
+.btns button:last-child {
+  color: $buttonBackgroundModalColor;
+  border-color: $buttonBackgroundModalColor;
+  display: flex;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  width: fit-content;
+  padding: $spacing-10 $spacing-xl;
+  align-items: center;
+}
